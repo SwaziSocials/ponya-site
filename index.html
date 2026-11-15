@@ -1,0 +1,418 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><title>Ponya</title><meta name="robots" content="noindex,nofollow"><link rel="preconnect" href="https://fonts.googleapis.com/"><link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin><link rel="stylesheet" href="assets/ponya-fonts.css"><link rel="stylesheet" href="assets/ponya.css"></head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="sun" viewBox="0 0 88 40"><g fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M26 38a18 18 0 0 1 36 0"></path><path d="M44 3v10M30 7l4 9M58 7l-4 9M18 15l7 6M70 15l-7 6M10 26l9 3M78 26l-9 3M4 37h12M72 37h12"></path></g></symbol>
+  <symbol id="i-bowl" viewBox="0 0 48 48"><g fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M8 22h32a16 13 0 0 1-32 0z"></path><path d="M18 16c0-3 2-3 2-6M24 16c0-3 2-3 2-6M30 16c0-3 2-3 2-6"></path></g></symbol>
+  <symbol id="i-drop" viewBox="0 0 48 48"><g fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M24 7c6 8 12 14 12 21a12 12 0 0 1-24 0c0-7 6-13 12-21z"></path><path d="M19 29a5 5 0 0 0 5 5"></path></g></symbol>
+  <symbol id="i-wave" viewBox="0 0 48 48"><g fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"><path d="M6 19c4-4 8-4 12 0s8 4 12 0 8-4 12 0M6 29c4-4 8-4 12 0s8 4 12 0 8-4 12 0"></path></g></symbol>
+</svg>
+
+<div id="progress" aria-hidden="true" style="transform: scaleX(0);"></div>
+
+<header class="site" id="siteHeader">
+  <div class="wrap bar">
+    <a class="mark" href="#top" aria-label="Ponya home"><svg><use href="#sun"></use></svg><b>ponya</b><small>WELLNESS. POWER. FREEDOM.</small></a>
+    <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="mainNav">Menu</button>
+    <nav class="main" id="mainNav" data-closed="">
+      <a href="#film">The film</a>
+      <a href="#pod">The Pod</a>
+      <a href="#anywhere">Anywhere</a>
+      <a href="#navigation">Care navigation</a>
+      <a href="#community">Community</a>
+      <a href="#membership">Membership</a>
+      <a href="#faq">FAQ</a>
+      <a class="more" href="app/">Session app</a><a class="more" href="portal/">Practitioner portal</a><a class="more" href="client/">Client portal</a><a class="more" href="learn/">Education Hub</a>
+      <a class="btn btn-solid" href="#book">Book your Pod</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section id="top" class="hero">
+    <div class="photo"><img src="assets/original/hero.jpg" alt="A quiet Ponya Pod corner at golden hour: an armchair with a knit throw, a white foot tub of warm water with an ionic array, mason jars of tea and herbs, candles and plants." fetchpriority="high"></div>
+    <div class="wrap">
+      <div class="hero-copy">
+        <svg class="sun-draw" viewBox="0 0 88 40" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path style="--len:60" d="M26 38a18 18 0 0 1 36 0"></path><path style="--len:140;animation-delay:.9s" d="M44 3v10M30 7l4 9M58 7l-4 9M18 15l7 6M70 15l-7 6M10 26l9 3M78 26l-9 3M4 37h12M72 37h12"></path></g></svg>
+        <p class="eyebrow rise d1">A Ponya Pod</p>
+        <h1 class="rise d2">An hour that is <em>only</em> yours.</h1>
+        <p class="lede rise d3">A cup of tea. A warm ionic foot soak. Someone who sits with you and really asks how you are. Ponya is wellness and care navigation for the whole community, in person, at home or virtually.</p>
+        <div class="actions rise d4">
+          <a class="btn btn-solid" href="#book">Book your Ponya Pod</a>
+          <a class="btn btn-ghost" href="#film">Watch the film</a>
+        </div>
+        <p class="note rise d4">Opening January 2027 · Los Angeles</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="film" class="film" aria-labelledby="film-title">
+    <div class="wrap">
+      <div class="film-head"><p class="eyebrow">The film</p><h2 id="film-title">What is <em>Ponya</em>?</h2><p class="lede">A minute and a half inside a Ponya Pod. Turn your sound on.</p></div>
+      <div class="film-frame"><video id="filmVideo" controls="" playsinline="" preload="metadata" poster="assets/original/hero.jpg"><source src="video/what-is-ponya.mp4" type="video/mp4"></video></div>
+    </div>
+  </section>
+
+  <section id="pod" class="chapters">
+    <div class="wrap">
+      <div class="chapters-head">
+        <p class="eyebrow">Inside a Pod</p>
+        <h2>Close your eyes. When was the last time an hour was <em>only</em> yours?</h2>
+        <p class="lede">Every Ponya Pod follows the same slow rhythm, so you always know what is coming and can simply let go.</p>
+      </div>
+
+      <article class="chapter">
+        <figure class="frame"><img src="assets/original/arrive.jpg" alt="A Ponya practitioner hands a mason jar of herbal tea to a guest settling into an armchair, her feet in a white foot tub."><figcaption>Arrive</figcaption></figure>
+        <div class="text">
+          <p class="step">First, you arrive</p>
+          <h3>Tea in hand. <em>Phone</em> down.</h3>
+          <p class="body">You are welcomed in, handed a warm cup of tea from our herb bar, and invited to set your phone aside. The lights are low and the music is slow.</p>
+        </div>
+      </article>
+
+      <article class="chapter">
+        <figure class="frame"><img src="assets/original/soak.jpg" alt="Close-up of a guest's feet in a white foot tub with a black ionic array as a practitioner sprinkles Celtic salt into the water."><figcaption>The soak</figcaption></figure>
+        <div class="text">
+          <p class="step">Then, the soak</p>
+          <h3>A warm ionic <em>foot soak</em>.</h3>
+          <p class="body">Your feet settle into warm water with Celtic salt and our ionic array. It is simply a quiet, warm place to rest while your shoulders drop.</p>
+        </div>
+      </article>
+
+      <article class="chapter">
+        <figure class="frame"><img src="assets/original/conversation.jpg" alt="A Ponya practitioner with long braids listens closely to an older guest holding a mason jar of tea."><figcaption>The conversation</figcaption></figure>
+        <div class="text">
+          <p class="step">And then, someone asks</p>
+          <h3>Someone <em>really</em> asks.</h3>
+          <p class="body">Your Ponya practitioner sits with you and asks how you are, and waits for the answer. One thing on your mind, held with care. If something comes up, you leave with a clear next step.</p>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="questions" aria-labelledby="q-title">
+    <div class="wrap">
+      <div class="q-head">
+        <p class="eyebrow">Where we begin</p>
+        <h2 id="q-title">Every Pod starts with three questions.</h2>
+      </div>
+      <div class="q-grid">
+        <div class="q"><div class="ring"><svg><use href="#i-bowl"></use></svg></div><h3>Nourish</h3><p class="ask">Are you nourished?</p><p class="body">Food, water and rest that fit your life and your care plan.</p></div>
+        <div class="q"><div class="ring"><svg><use href="#i-drop"></use></svg></div><h3>Cleanse</h3><p class="ask">Are you cleansing?</p><p class="body">Gentle self-care routines that feel good to come back to.</p></div>
+        <div class="q"><div class="ring"><svg><use href="#i-wave"></use></svg></div><h3>Circulate</h3><p class="ask">Are you circulating?</p><p class="body">Warmth, movement and calm that keep you going.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="anywhere" class="anywhere">
+    <div class="wrap">
+      <div class="head">
+        <p class="eyebrow">Anywhere</p>
+        <h2>In person, at home, or <em>virtual</em>.</h2>
+        <p class="lede">Can't make it in? Your Pod comes to you.</p>
+      </div>
+      <div class="ways">
+        <div class="way"><img src="assets/original/arrive.jpg" alt=""><div><h3>In person</h3><p>A practitioner brings the whole Pod to your living room: the tub, the array, the teas and the conversation.</p></div></div>
+        <div class="way"><img src="assets/original/at-home.jpg" alt=""><div><h3>Your own set</h3><p>Keep the ritual going between visits with your Ponya at-home set.</p></div></div>
+        <div class="way"><img src="assets/original/virtual.jpg" alt=""><div><h3>Virtual</h3><p>Soak from your own sofa with your practitioner right there on screen.</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="set paper" aria-labelledby="set-title">
+    <div class="set-grid">
+      <div class="set-photo"><img src="assets/original/at-home.jpg" alt="Two friends laughing as they unpack the Ponya at-home set: a white foot tub, an ionic array, mason jars of tea, Celtic salt and herbs wrapped in kraft paper."></div>
+      <div class="set-copy">
+        <p class="eyebrow">At home</p>
+        <h2 id="set-title">Your Ponya <em style="color:var(--copper)">ritual</em>, at home.</h2>
+        <p class="lede">Everything you need to make the hour yours, packed in kraft paper and delivered to your door.</p>
+        <div class="slip">
+          <div class="slip-head"><span>Ponya at-home set</span><span>Packing slip</span></div>
+          <ul>
+            <li><b>White foot tub</b><span>Wide and deep</span></li>
+            <li><b>Ionic array</b><span>With cord</span></li>
+            <li><b>Ponya teas</b><span>Mason jars, loose leaf</span></li>
+            <li><b>Celtic salt</b><span>For the soak</span></li>
+            <li><b>Herb bundles</b><span>Monthly refill</span></li>
+          </ul>
+        </div>
+        <form class="request waitlist" id="waitlistForm">
+          <p class="wl-title full">Join the at-home set waitlist</p>
+          <label>Your name<input id="w-name" name="name" autocomplete="name" required></label>
+          <label>Email<input id="w-email" name="email" type="email" autocomplete="email" required></label>
+          <label class="full">I'm interested in
+            <select id="w-interest" name="interest"><option>Ponya at-home set</option><option>First Ponya Pod session + at-home set</option><option>Not sure yet</option></select></label>
+          <div class="full"><button class="btn btn-solid" type="submit" id="w-send">Join the waitlist</button></div>
+          <div class="done full" id="w-done" hidden="">
+            <p><b>Almost there.</b> Send this message to <span class="addr">swazisocials@gmail.com</span> and we'll reply within two business days.</p>
+            <pre id="w-text"></pre>
+            <div class="row"><button class="btn btn-solid" type="button" id="w-copy">Copy message</button><a class="btn btn-ghost" style="color:var(--ink);border-color:var(--rule-light)" id="w-mail" href="#">Open email</a></div>
+          </div>
+        </form>
+
+      </div>
+    </div>
+  </section>
+
+  <section id="navigation" class="nav-band">
+    <div class="wrap nav-grid">
+      <figure class="frame"><img src="assets/original/navigation.jpg" alt="A Ponya practitioner in glasses helps a young woman write a list of questions in a kraft notebook before her mother's appointment."><figcaption>Care navigation</figcaption></figure>
+      <div class="nav-copy">
+        <p class="eyebrow">Care navigation</p>
+        <h2>Walk in <em>ready</em>.</h2>
+        <p class="lede">When life brings appointments and hard news, we help you and your family get organized, so you know what to ask and what comes next.</p>
+        <ul class="checks">
+          <li>Your questions, written down before every appointment</li>
+          <li>Records, results and medication lists in one place</li>
+          <li>Help with health, insurance and benefits paperwork</li>
+          <li>Support speaking up with providers and insurers</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="community" class="community">
+    <div class="bg"><img src="assets/original/community.jpg" alt="A warm evening gathering of women laughing over mason jars of tea, led by two Ponya practitioners, with families and elders behind them."></div>
+    <div class="wrap">
+      <div class="inner">
+        <p class="eyebrow">For everyone</p>
+        <h2>For the <em>whole</em> community.</h2>
+        <p class="lede">Ponya is for everyone who needs an hour of care, with programs made just for women.</p>
+        <div class="gatherings">
+          <div class="gathering"><div><b>Ponya Circles</b><small>A monthly guided circle for adult women. A women's initiative.</small></div><span>Members</span></div>
+          <div class="gathering"><div><b>Community gatherings</b><small>Quarterly evenings of tea, soaks and stories, open to all.</small></div><span>$75 · $55 members</span></div>
+          <div class="gathering"><div><b>Caregiver reset</b><small>A quiet hour for the people doing the caring.</small></div><span>Dates soon</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="membership" class="members paper">
+    <div class="wrap">
+      <div class="head">
+        <p class="eyebrow">Membership</p>
+        <h2>Choose your rhythm.</h2>
+        <p class="lede">Founding member prices for our January 2027 opening. Every member gets the Ponya Life OS, our calm space for appointments, questions and routines.</p>
+      </div>
+      <div class="tiers">
+        <article class="tier">
+          <p class="who">Start here</p>
+          <h3>Ponya Circle</h3>
+          <div class="price"><b>$175</b><span>a month</span></div>
+          <ul>
+            <li>One Ponya Pod a month, in person or virtual</li>
+            <li>A monthly tea and herb pack</li>
+            <li>A monthly email check-in</li>
+            <li>Ponya Circles and member event prices</li>
+          </ul>
+          <a class="btn btn-solid" href="#book" data-tier="Ponya Circle">Choose Circle</a>
+        </article>
+        <article class="tier featured">
+          <p class="who">Most chosen</p>
+          <h3>Ponya Care</h3>
+          <div class="price"><b>$275</b><span>a month</span></div>
+          <ul>
+            <li>Everything in Circle</li>
+            <li>Two care navigation check-ins a month</li>
+            <li>Appointment prep and your questions written down</li>
+            <li>Form help when you need it</li>
+          </ul>
+          <a class="btn btn-solid" href="#book" data-tier="Ponya Care">Choose Care</a>
+        </article>
+        <article class="tier">
+          <p class="who">Full support</p>
+          <h3>Ponya Care Plus</h3>
+          <div class="price"><b>$450</b><span>a month</span></div>
+          <ul>
+            <li>Two Ponya Pods a month</li>
+            <li>A weekly check-in with your practitioner</li>
+            <li>Prep before every appointment</li>
+            <li>Everything in Care</li>
+          </ul>
+          <a class="btn btn-solid" href="#book" data-tier="Ponya Care Plus">Choose Care Plus</a>
+        </article>
+      </div>
+      <div class="extras">
+        <div class="extra"><b>Care navigation session</b><p>One hour, virtual, for anyone.</p><span class="amt">$95 a session</span></div>
+        <div class="extra"><b>Community gathering</b><p>Quarterly evenings, open to all.</p><span class="amt">$75 · $55 for members</span></div>
+        <div class="extra"><b>Gift a membership</b><p>Family and friends can cover care for someone they love.</p><span class="amt">Any tier</span></div>
+      </div>
+      <p class="fineprint">Ponya is not covered by insurance or Medi-Cal yet. We are working toward it and will tell the list when that changes.</p>
+    </div>
+  </section>
+
+  <section class="promise" aria-label="Our promise">
+    <div class="wrap" style="display:flex;flex-direction:column;align-items:center;gap:26px">
+      <svg aria-hidden="true"><use href="#sun"></use></svg>
+      <blockquote>We work <em>alongside</em> your doctors, never in place of them.</blockquote>
+      <div class="safety">
+        <b>Your safety check comes first</b>
+        <p>Before your first soak we ask a few quick questions. Tell us if you have a pacemaker or other implanted device, are pregnant, have open cuts on your feet, or have fluid or circulation limits from your care team. If anything is flagged, we reschedule and check in with you first.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="partners" aria-labelledby="p-title">
+    <div class="wrap">
+      <div class="head" style="margin-bottom:clamp(28px,4vw,44px)">
+        <p class="eyebrow">Work with Ponya</p>
+        <h2 id="p-title">Bring Ponya to your people.</h2>
+      </div>
+      <div class="p-grid">
+        <div><h3>Organizations</h3><p>Clinics, case managers, nonprofits and employers can refer people, sponsor memberships or bring a Pod into a program.</p><a href="#book" data-as="An organization or care team">Start a conversation</a></div>
+        <div><h3>Practitioners</h3><p>Doulas, nurses, care navigators and wellness practitioners can join the Ponya team and host Pods.</p><a href="#book" data-as="A practitioner joining the team">Join the team</a></div>
+        <div><h3>Host a gathering</h3><p>Open your space for a Ponya community evening and we bring the soaks, the teas and the team.</p><a href="#book" data-as="Someone who wants to host a gathering">Ask about hosting</a></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="faq" class="faq-band">
+    <div class="wrap">
+      <div class="head"><p class="eyebrow">Questions</p><h2>Good to know.</h2></div>
+      <div class="faq">
+        <details><summary>Is Ponya medical care?</summary><p>No. Ponya offers wellness experiences and care navigation support. We don't diagnose, treat or give medical advice, and the foot soak is for comfort and relaxation. We help you stay organized, prepared and cared for while your doctors handle your treatment.</p></details>
+        <details><summary>Who is Ponya for?</summary><p>Ponya is for the whole community: anyone who wants an hour of care, families going through a hard season, and the people caring for them. Some programs, like Ponya Circles, are made just for women.</p></details>
+        <details><summary>Where do Pods happen?</summary><p>In your home in the Los Angeles area, at our community gatherings, or virtually with your own at-home set. Care navigation check-ins happen by phone or video.</p></details>
+        <details><summary>What is an ionic foot soak?</summary><p>A warm foot soak in a basin of water with Celtic salt and a small ionic array. At Ponya it is a calm, warm way to rest during your Pod. We don't make health claims about it.</p></details>
+        <details><summary>Can someone else pay for my membership?</summary><p>Yes. Family and friends can gift any tier, and partner organizations may sponsor memberships. Tell us who supports you when you book.</p></details>
+        <details><summary>When does Ponya open?</summary><p>We open to members in January and February 2027. Book now to hold a founding spot and founding price.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <section id="book" class="book paper">
+    <div class="wrap book-grid">
+      <div class="book-copy">
+        <p class="eyebrow">Book your Ponya Pod</p>
+        <h2>Tell us a little. We'll take it from there.</h2>
+        <p class="lede">Share how to reach you and what would help most. We reply within two business days to set up a short welcome call.</p>
+        <ul class="expect">
+          <li><b>Today</b><span>You send this request.</span></li>
+          <li><b>Day 2</b><span>We reach out to book your welcome call.</span></li>
+          <li><b>The call</b><span>We listen, run your safety check, and plan your first Pod.</span></li>
+        </ul>
+      </div>
+      <form class="request" id="requestForm" novalidate="">
+        <label>Your name<input id="f-name" name="name" autocomplete="name" required=""></label>
+        <label>Email<input id="f-email" name="email" type="email" autocomplete="email" required=""></label>
+        <label>Phone (optional)<input id="f-phone" name="phone" type="tel" autocomplete="tel"></label>
+        <label>I'm interested in
+          <select id="f-tier" name="tier">
+            <option>Not sure yet</option>
+            <option>Ponya Circle ($175 a month)</option>
+            <option>Ponya Care ($275 a month)</option>
+            <option>Ponya Care Plus ($450 a month)</option>
+            <option>A care navigation session ($95)</option>
+            <option>Community gatherings</option>
+          </select>
+        </label>
+        <label class="full">I'm reaching out as
+          <select id="f-as" name="as">
+            <option>Someone looking for care for myself</option>
+            <option>A family member or caregiver</option>
+            <option>An organization or care team</option>
+            <option>A practitioner joining the team</option>
+            <option>Someone who wants to host a gathering</option>
+          </select>
+        </label>
+        <label class="full">What would help most right now?<textarea id="f-msg" name="message" placeholder="A few words is plenty. Please don't include medical records."></textarea></label>
+        <label class="consent" for="f-consent"><input type="checkbox" id="f-consent"><span>I agree that Ponya may use these details to reply to me, as described in the Privacy Policy below. I'm 18 or older, or writing on someone's behalf.</span></label>
+        <div class="full"><button class="btn btn-solid" type="submit" id="f-send" disabled="">Request my Pod</button></div>
+        <div class="done" id="f-done" hidden="">
+          <p><b>Almost there.</b> Send this message to <span class="addr">swazisocials@gmail.com</span> and we'll reply within two business days.</p>
+          <pre id="f-text"></pre>
+          <div class="row"><button class="btn btn-solid" type="button" id="f-copy">Copy message</button><a class="btn btn-ghost" style="color:var(--ink);border-color:var(--rule-light)" id="f-mail" href="#">Open email</a></div>
+        </div>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot">
+      <div>
+        <a class="mark" href="#top" aria-label="Ponya home"><svg><use href="#sun"></use></svg><b>ponya</b><small>WELLNESS. POWER. FREEDOM.</small></a>
+        <p>Living on beat. Wellness and care navigation for the whole community, with programs made just for women.</p>
+      </div>
+      <div><h4>Explore</h4><a href="#pod">The Pod</a><a href="#anywhere">Anywhere</a><a href="#navigation">Care navigation</a><a href="#community">Community</a><a href="#membership">Membership</a></div>
+      <div><h4>Connect</h4><a href="#book">Book your Pod</a><a href="#faq">FAQ</a><a href="#book">Work with Ponya</a></div>
+    <div><h4>Ponya spaces</h4><a href="app/">Session app</a><a href="portal/">Practitioner portal</a><a href="client/">Client portal</a><a href="learn/">Education Hub</a></div>
+    </div>
+    <div class="legal-row">
+      <details class="legal"><summary>Privacy Policy</summary><div>
+        <p class="draft">Template draft. To be reviewed by the business owner before launch.</p>
+        <p>Ponya, a brand of Swazi Holdings, LLC (in formation), only collects what you choose to send. This page does not store your details: the request form prepares a message that you send yourself to swazisocials@gmail.com. We use it to reply to you and plan your Pod. We do not sell your information. Fonts load from Google Fonts, which receives standard request details. We use no analytics, ad trackers or tracking cookies. Ask to see, correct or delete your information anytime at swazisocials@gmail.com.</p>
+      </div></details>
+      <details class="legal"><summary>Terms of Service</summary><div>
+        <p class="draft">Template draft. To be reviewed by the business owner before launch.</p>
+        <p>Ponya provides wellness experiences and care navigation support. We do not diagnose, treat or cure any condition or give medical advice. Foot soaks, teas and herbs are offered for comfort and relaxation. Every guest completes a safety check before a soak. Memberships are billed at the prices shown on this page. Payment, renewal and cancellation details: [BILLING AND CANCELLATION TERMS].</p>
+      </div></details>
+      <details class="legal"><summary>Refund Policy</summary><div>
+        <p class="draft">Template draft. To be reviewed by the business owner before launch.</p>
+        <p>Prices: Ponya Circle $175 a month; Ponya Care $275 a month; Ponya Care Plus $450 a month; care navigation session $95; community gatherings $75, or $55 for members. Cancellation notice and refunds: [MEMBERSHIP REFUND TERMS]. Session rescheduling window: [SESSION CANCELLATION WINDOW].</p>
+      </div></details>
+    </div>
+    <div class="fine">
+      <p>Ponya offers wellness experiences and care navigation support. Ponya is not a medical provider and does not diagnose, treat or cure any condition. Talk with your doctor before starting a new wellness practice. In an emergency, call 911.</p>
+      <div class="fine-row"><span>© 2026 Ponya. All rights reserved.</span><span>Site by Swazi Socials</span></div>
+    </div>
+  </div>
+</footer>
+<script>
+(function(){
+  const header=document.getElementById('siteHeader'), bar=document.getElementById('progress');
+  function onScroll(){
+    const h=document.documentElement, max=h.scrollHeight-h.clientHeight;
+    bar.style.transform='scaleX('+(max>0?h.scrollTop/max:0)+')';
+    header.classList.toggle('solid',h.scrollTop>40);
+  }
+  addEventListener('scroll',onScroll,{passive:true}); onScroll();
+
+  const t=document.getElementById('menuToggle'), nav=document.getElementById('mainNav');
+  t.addEventListener('click',()=>{const open=nav.hasAttribute('data-closed');nav.toggleAttribute('data-closed',!open);t.setAttribute('aria-expanded',open)});
+  nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{if(getComputedStyle(t).display!=='none'){nav.setAttribute('data-closed','');t.setAttribute('aria-expanded','false')}}));
+
+  if('IntersectionObserver' in window){
+    const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('seen');io.unobserve(e.target)}}),{threshold:.25});
+    document.querySelectorAll('.frame').forEach(f=>io.observe(f));
+  } else document.querySelectorAll('.frame').forEach(f=>f.classList.add('seen'));
+
+  const tier=document.getElementById('f-tier'), as=document.getElementById('f-as');
+  document.querySelectorAll('[data-tier]').forEach(a=>a.addEventListener('click',()=>{const v=a.dataset.tier;[...tier.options].forEach(o=>{if(o.text.startsWith(v+' ('))tier.value=o.value})}));
+  document.querySelectorAll('[data-as]').forEach(a=>a.addEventListener('click',()=>{as.value=a.dataset.as}));
+
+  const form=document.getElementById('requestForm'), send=document.getElementById('f-send'), consent=document.getElementById('f-consent');
+  const name=document.getElementById('f-name'), email=document.getElementById('f-email');
+  function ready(){send.disabled=!(consent.checked&&name.value.trim()&&/\S+@\S+\.\S+/.test(email.value))}
+  [consent,name,email].forEach(el=>el.addEventListener('input',ready)); consent.addEventListener('change',ready);
+  form.addEventListener('submit',e=>{
+    e.preventDefault(); if(send.disabled) return;
+    const v=id=>document.getElementById(id).value.trim();
+    const text='Hi Ponya,\n\nI would like to book a Ponya Pod.\n\nName: '+v('f-name')+'\nEmail: '+v('f-email')+(v('f-phone')?'\nPhone: '+v('f-phone'):'')+'\nInterested in: '+v('f-tier')+'\nReaching out as: '+v('f-as')+(v('f-msg')?'\n\nWhat would help most: '+v('f-msg'):'')+'\n';
+    document.getElementById('f-text').textContent=text;
+    document.getElementById('f-mail').href='mailto:swazisocials@gmail.com?subject='+encodeURIComponent('Ponya Pod request')+'&body='+encodeURIComponent(text);
+    document.getElementById('f-done').hidden=false; send.textContent='Message ready';
+  });
+  document.getElementById('f-copy').addEventListener('click',async e=>{
+    const btn=e.currentTarget, pre=document.getElementById('f-text');
+    try{await navigator.clipboard.writeText(pre.textContent);btn.textContent='Copied'}
+    catch(_){const r=document.createRange();r.selectNodeContents(pre);const s=getSelection();s.removeAllRanges();s.addRange(r);btn.textContent='Selected, press copy'}
+  });
+  const wf=document.getElementById('waitlistForm');
+  wf.addEventListener('submit',e=>{
+    e.preventDefault(); if(!wf.reportValidity()) return;
+    const v=id=>document.getElementById(id).value.trim();
+    const text='Hi Ponya,\n\nPlease add me to the at-home set waitlist.\n\nName: '+v('w-name')+'\nEmail: '+v('w-email')+'\nInterested in: '+v('w-interest')+'\n';
+    document.getElementById('w-text').textContent=text;
+    document.getElementById('w-mail').href='mailto:swazisocials@gmail.com?subject='+encodeURIComponent('Ponya at-home set waitlist')+'&body='+encodeURIComponent(text);
+    document.getElementById('w-done').hidden=false; document.getElementById('w-send').textContent='Message ready';
+  });
+  document.getElementById('w-copy').addEventListener('click',async e=>{
+    const btn=e.currentTarget, pre=document.getElementById('w-text');
+    try{await navigator.clipboard.writeText(pre.textContent);btn.textContent='Copied'}
+    catch(_){const r=document.createRange();r.selectNodeContents(pre);const s=getSelection();s.removeAllRanges();s.addRange(r);btn.textContent='Selected, press copy'}
+  });
+})();
+</script>
+</body></html>
