@@ -1,0 +1,92 @@
+/* BRIGHT DRAFT 1115 (Ashley voice note: "brighter and lighter", event flyer direction):
+   cream-peach paper, lilac + peach watercolor smoke, Playfair with one colored italic word,
+   spaced caps, white rounded cards. Loaded after ponya.css; content and structure unchanged. */
+:root{
+  --night:#F4E7D8;            /* page ground: cream-peach paper */
+  --forest:#FBF3EA;           /* raised bands: lighter paper */
+  --veil:247,236,224;         /* light photo veil */
+  --cream:#2A211D;            /* main type (was cream on dark) */
+  --cream-dim:rgba(42,33,29,.72);
+  --copper:#B4532A;           /* brand sun, terracotta-peach */
+  --glow:#B4532A;             /* accent: colored italic word, eyebrows, buttons */
+  --lilac:#6D52C6;            /* second accent from the flyers */
+  --sand:#FBF4EC;
+  --ink:#2A211D;
+  --ink-dim:#5E514A;
+  --rule-dark:rgba(42,33,29,.13);
+  --rule-light:rgba(42,33,29,.12);
+  --card:#FFFFFF;
+  --shadow:0 24px 60px -30px rgba(120,78,52,.35);
+  color-scheme:light;
+}
+body{background:
+  radial-gradient(1200px 700px at 85% 8%,rgba(214,196,240,.35),transparent 60%),
+  radial-gradient(1000px 600px at 5% 45%,rgba(246,196,166,.28),transparent 60%),
+  var(--night)}
+body::before{background:var(--night)}
+header.site.solid{background:rgba(247,236,224,.92)}
+.mark small{color:var(--copper)}
+.btn-solid{color:#FFF8F1}
+.btn-solid:hover{color:var(--glow)}
+nav.main a.btn{color:#FFF8F1}
+.paper .btn-solid{color:#FFF8F1}
+.step,.q .ask{color:var(--lilac)}
+
+/* photos: lighter, warmer, softly veiled instead of darkened */
+.hero .photo img,.community .bg img,.way img,.page-hero img{filter:brightness(1.18) saturate(.92) contrast(.92)}
+.hero .photo img{filter:none;object-position:70% 50%}
+.hero::before{background:
+  linear-gradient(90deg,rgba(var(--veil),.82) 0%,rgba(var(--veil),.55) 34%,rgba(var(--veil),0) 58%),
+  linear-gradient(0deg,rgba(var(--veil),1) 0%,rgba(var(--veil),0) 22%),
+  linear-gradient(180deg,rgba(var(--veil),.7) 0,rgba(var(--veil),0) 150px)}
+@media (max-width:700px){.hero .photo img{object-position:80% 12%}.hero::before{background:linear-gradient(0deg,rgba(var(--veil),1) 0%,rgba(var(--veil),.93) 36%,rgba(var(--veil),0) 60%),linear-gradient(180deg,rgba(var(--veil),.75) 0,rgba(var(--veil),0) 120px)}}
+.way::before{background:linear-gradient(0deg,rgba(var(--veil),.97) 0%,rgba(var(--veil),.7) 40%,rgba(var(--veil),0) 72%)}
+.community::before{background:linear-gradient(90deg,rgba(var(--veil),.95) 0%,rgba(var(--veil),.82) 46%,rgba(var(--veil),.1) 100%)}
+@media (max-width:700px){.community::before{background:linear-gradient(0deg,rgba(var(--veil),.97) 0%,rgba(var(--veil),.86) 60%,rgba(var(--veil),.4) 100%)}}
+.frame figcaption{background:rgba(255,255,255,.82);color:var(--ink)}
+
+/* watercolor smoke (CSS only, lilac + peach) */
+.questions,.partners,.film{position:relative;isolation:isolate}
+.questions::before{top:-20%;width:1100px;height:900px;background:
+  radial-gradient(closest-side at 38% 45%,rgba(176,150,232,.38),transparent),
+  radial-gradient(closest-side at 64% 55%,rgba(244,176,140,.36),transparent),
+  radial-gradient(closest-side at 50% 30%,rgba(255,255,255,.6),transparent);filter:blur(30px)}
+.film::before{content:"";position:absolute;z-index:-1;left:50%;top:0;width:min(1200px,100%);height:70%;transform:translateX(-50%);pointer-events:none;background:
+  radial-gradient(closest-side at 30% 60%,rgba(190,166,238,.32),transparent),
+  radial-gradient(closest-side at 72% 50%,rgba(246,184,150,.30),transparent);filter:blur(40px)}
+.q .ring{border-color:rgba(109,82,198,.35);background:rgba(255,255,255,.55);color:var(--lilac)}
+
+/* white rounded cards with soft shadow */
+.film-frame{border-radius:20px;box-shadow:var(--shadow)}
+.frame,.way{border-radius:18px;box-shadow:var(--shadow)}
+.slip,.tier,form.request,form.waitlist,.paper .card,.card{background:var(--card);border-radius:20px;border-color:rgba(42,33,29,.08);box-shadow:var(--shadow)}
+.slip{border-style:dashed;border-color:rgba(42,33,29,.2)}
+.tier.featured{background:linear-gradient(160deg,#FFFFFF 0%,#F6EEFF 55%,#FFE9DC 100%);color:var(--ink);border-color:rgba(109,82,198,.25)}
+.tier.featured li::before{background:var(--lilac)}
+input,select,textarea{background:#FFFCF8}
+.done{background:#FFF7F0}
+.done pre{background:#FFFFFF}
+footer{background:#EFDFCC}
+
+/* Prity 1115: header lockup aligned on one centre line, tighter spacing */
+.mark{align-items:center;gap:0}
+.mark svg{width:40px;height:18px;margin-bottom:2px}
+.mark b{font-size:1.75rem;line-height:.95}
+.mark small{font-size:.4rem;letter-spacing:.14em;margin-top:5px;white-space:nowrap}
+.bar{min-height:68px}
+.hero{margin-top:-69px}
+
+/* Prity 1115: subtle herb / tea / tub icon pattern instead of flat backgrounds */
+body,section.paper,.set,.members,section.book,.partners,footer{background-image:url("bright/pattern.svg");background-size:280px 280px}
+body{background-image:url("bright/pattern.svg"),radial-gradient(1200px 700px at 85% 8%,rgba(214,196,240,.35),transparent 60%),radial-gradient(1000px 600px at 5% 45%,rgba(246,196,166,.28),transparent 60%);background-size:280px 280px,auto,auto}
+.partners{background-color:var(--forest)}
+
+/* Prity 1115: images in the bottom half */
+.bright-figure{margin:0;border-radius:20px;overflow:hidden;box-shadow:var(--shadow)}
+.bright-figure img{width:100%;height:100%;object-fit:cover}
+.bright-figure.wide{aspect-ratio:16/7;margin-bottom:clamp(28px,4vw,48px)}
+.faq-band .wrap{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(0,.85fr);column-gap:clamp(28px,5vw,64px);align-items:start}
+.faq-band .head{grid-column:1/-1}
+.bright-figure.side{aspect-ratio:4/5;position:sticky;top:100px}
+@media (max-width:860px){.faq-band .wrap{grid-template-columns:1fr}.bright-figure.side{position:static;aspect-ratio:16/10;margin-top:32px}.bright-figure.wide{aspect-ratio:16/10}}
+.set-photo img{object-position:50% 60%}
