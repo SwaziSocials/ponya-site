@@ -201,6 +201,7 @@ nav.main a.btn:hover{color:var(--glow)}
 .tier.featured{background:var(--forest);color:var(--cream);border-color:var(--forest)}
 .tier .who{font-family:var(--label);font-size:.6rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--copper)}
 .tier.featured .who{color:var(--glow)}
+.tier.featured h3{color:var(--cream)}
 .tier h3{font-size:1.9rem}
 .price{display:flex;align-items:baseline;gap:8px;padding-bottom:16px;border-bottom:1px solid var(--rule-light)}
 .tier.featured .price{border-color:var(--rule-dark)}
@@ -217,9 +218,11 @@ nav.main a.btn:hover{color:var(--glow)}
 .extra{padding:22px 24px;border-top:1px solid var(--rule-light);display:flex;flex-direction:column;gap:4px;min-width:0}
 .extra b{font-family:var(--display);font-weight:500;font-size:1.15rem}
 .extra p{color:var(--ink-dim);font-size:.94rem}
+.extra .btn{align-self:flex-start;margin-top:14px}
 .extra .amt{font-family:var(--label);font-size:.66rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--copper);margin-top:6px}
 .fineprint{margin-top:26px;font-size:.9rem;color:var(--ink-dim);max-width:78ch}
 @media (max-width:960px){.tiers,.extras{grid-template-columns:1fr}}
+.extras+.extras{grid-template-columns:repeat(2,minmax(0,1fr))}@media (max-width:960px){.extras+.extras{grid-template-columns:1fr}}
 
 /* promise */
 .promise{padding-block:var(--pad);text-align:center;display:flex;flex-direction:column;align-items:center;gap:26px}
