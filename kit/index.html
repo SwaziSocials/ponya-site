@@ -174,7 +174,7 @@ footer .mini{color:var(--metal)}
 <header>
   <div class="wrap bar">
     <a class="mark" href="#top" aria-label="ponya home"><svg><use href="#sun"/></svg><b>ponya</b><small>HEALTH IS WEALTH.</small></a>
-    <nav aria-label="Kit sections"><a href="#inside">Inside</a><a href="#ships">Shipping</a><a href="#care">Good to know</a><a class="buy" href="#buy">Reserve the Kit</a></nav>
+    <nav aria-label="Kit sections"><a href="#inside">Inside</a><a href="#ships">Shipping</a><a href="#care">Good to know</a><a class="buy" href="#buy">Order the Kit</a></nav>
   </div>
 </header>
 
@@ -187,9 +187,9 @@ footer .mini{color:var(--metal)}
         <p class="lede">A warm foot soak, a few shelf favorites our members reach for, moringa seeds and a simple way to keep your routine. Everything for an hour that is only yours, packed by hand in Los Angeles.</p>
         <div class="price-row">
           <p class="price">$225<small>One kit · shipping included · US only</small></p>
-          <a class="btn btn-solid" id="buy-top" href="https://form.jotform.com/263206347822153">Reserve your PONYA Kit</a>
+          <a class="btn btn-solid" id="buy-top" href="https://form.jotform.com/263206347822153">Order your PONYA Kit</a>
         </div>
-        <p class="ship-note"><b>Pre-sale:</b> reserve now and we email you to confirm your ship date and payment. Once your kit ships, tracking comes by email and it arrives in about 7 to 10 business days. Every item arrives sealed, just as its maker packed it.</p>
+        <p class="ship-note"><b>Ships on the 12th.</b> Order by the 9th and your kit ships on the 12th. Order after the 9th and it ships on the 12th of next month. <span id="nextship"></span> Tracking comes by email. Every item arrives sealed, just as its maker packed it.</p>
       </div>
       <div class="plate" role="img" aria-label="Illustration of the PONYA Kit box with a soak basin, bottles and seeds">
         <svg viewBox="0 0 360 220" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
@@ -261,10 +261,10 @@ footer .mini{color:var(--metal)}
         <h2 class="h2">Gathered fresh, <em style="color:var(--ink)">packed by hand.</em></h2>
       </div>
       <ol class="steps">
-        <li><b>You order</b><span>Reserving takes a minute. We email you to confirm your ship date and payment, and nothing is charged until then.</span></li>
+        <li><b>You order</b><span>Order by the 9th. We email you a secure payment link, and your order is set once it is paid.</span></li>
         <li><b>We gather</b><span>We bring in each item new, and check every seal and date.</span></li>
         <li><b>We pack</b><span>Your kit is boxed by hand in Los Angeles with a handwritten card.</span></li>
-        <li><b>It arrives</b><span>Tracking comes by email once your kit ships, then about 7 to 10 business days.</span></li>
+        <li><b>It arrives</b><span>Your kit ships on the 12th, with tracking by email.</span></li>
       </ol>
       <div class="ship-facts">
         <div><span class="mini">Where</span>United States, lower 48 states, for now.</div>
@@ -301,7 +301,7 @@ footer .mini{color:var(--metal)}
       <h2 class="h2">Bring the hour <em>home.</em></h2>
       <p class="lede">The soak, the shelf, the seeds and the guide. Shipping included.</p>
       <p class="price">$225</p>
-      <a class="btn btn-solid" id="buy-bottom" href="https://form.jotform.com/263206347822153">Reserve your PONYA Kit</a>
+      <a class="btn btn-solid" id="buy-bottom" href="https://form.jotform.com/263206347822153">Order your PONYA Kit</a>
     </div>
   </section>
 </main>
@@ -313,5 +313,8 @@ footer .mini{color:var(--metal)}
     <span>Los Angeles, California · ponya.me</span>
   </div>
 </footer>
+<script>
+(function(){var el=document.getElementById('nextship');if(!el)return;var m=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];var d=new Date();var mo=d.getMonth(),y=d.getFullYear();if(d.getDate()>9){mo+=1;if(mo>11){mo=0;y+=1}}el.innerHTML='<b>Next ship day: '+m[mo]+' 12</b> (order by '+m[mo]+' 9).'})();
+</script>
 </body>
 </html>
