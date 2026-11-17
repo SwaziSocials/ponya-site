@@ -1,0 +1,317 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>The PONYA Kit · ponya</title>
+<meta name="description" content="The PONYA Kit: a warm foot soak, a few shelf favorites our members like, moringa seeds and a simple way to keep your routine. Packed by hand in Los Angeles and shipped to your door.">
+<link rel="stylesheet" href="assets/ponya-fonts.css">
+<link rel="stylesheet" href="assets/season.css">
+<style>
+:root{
+  --display:"Playfair Display",Georgia,"Times New Roman",serif;
+  --body:"Lato","Helvetica Neue",Arial,sans-serif;
+  --label:"Montserrat","Helvetica Neue",Arial,sans-serif;
+  --wrap:1180px;--gut:clamp(16px,4vw,56px);--ease:cubic-bezier(.22,.7,.2,1);--sheet:clamp(28px,5vw,72px);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--ground);color:var(--on-ground);font-family:var(--body);font-size:1.0625rem;line-height:1.7;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+h1,h2,h3{font-family:var(--display);font-weight:400;margin:0;letter-spacing:-.015em}
+h1 em,h2 em,h3 em{font-style:italic;color:var(--metal-soft)}
+p{margin:0}
+a{color:inherit}
+img{max-width:100%;display:block}
+:focus-visible{outline:2px solid var(--metal);outline-offset:3px}
+.wrap{max-width:var(--wrap);margin-inline:auto;padding-inline:max(var(--gut),env(safe-area-inset-left,0px))}
+.mini{font-family:var(--label);font-size:.64rem;font-weight:600;letter-spacing:.22em;text-transform:uppercase}
+.eyebrow{display:inline-flex;align-items:center;gap:12px;font-family:var(--label);font-size:.66rem;font-weight:600;letter-spacing:.28em;text-transform:uppercase;color:var(--accent)}
+.eyebrow::before{content:"";width:28px;height:1px;background:currentColor}
+.lede{font-weight:300;font-size:clamp(1.06rem,1.3vw,1.2rem);line-height:1.7;color:var(--on-ground-dim);max-width:46ch}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:12px;min-height:52px;font-family:var(--label);font-size:.7rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;padding:0 30px;border-radius:999px;border:1px solid var(--metal);text-decoration:none;cursor:pointer;background:none;color:inherit;transition:background .45s var(--ease),color .45s var(--ease)}
+.btn-solid{background:var(--metal);color:var(--ground)}
+.btn-solid:hover{background:var(--metal-soft)}
+.btn-ghost:hover{background:rgba(var(--rgb-metal),.14)}
+
+/* draft ribbon: remove before publishing */
+.draft{background:var(--accent);color:var(--ink);text-align:center;font-family:var(--label);font-size:.62rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;padding:8px 16px;line-height:1.5}
+
+/* header */
+header{position:sticky;top:0;z-index:20;background:rgba(var(--rgb-ground),.78);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid var(--on-ground-faint)}
+header .bar{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:66px}
+.mark{display:flex;align-items:center;gap:10px;text-decoration:none}
+.mark svg{width:40px;height:19px;color:var(--metal)}
+.mark b{font-family:var(--display);font-size:1.6rem;font-weight:400;letter-spacing:.01em}
+.mark small{font-family:var(--label);font-size:.55rem;letter-spacing:.24em;color:var(--on-ground-dim)}
+header nav{display:flex;gap:6px;align-items:center}
+header nav a{font-family:var(--label);font-size:.62rem;letter-spacing:.18em;text-transform:uppercase;text-decoration:none;padding:8px 12px;border-radius:999px;color:var(--on-ground-dim)}
+header nav a:hover{color:var(--on-ground)}
+header nav a.buy{border:1px solid var(--metal);color:var(--metal-soft)}
+
+/* hero */
+.hero{position:relative;padding-block:clamp(48px,8vw,112px) calc(var(--sheet) + clamp(40px,6vw,88px));
+  background:radial-gradient(70% 60% at 85% 20%,rgba(var(--rgb-metal),.20),transparent 70%),radial-gradient(60% 50% at 0% 100%,rgba(var(--rgb-velvet),.55),transparent 70%),linear-gradient(180deg,var(--ground),var(--velvet))}
+.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(32px,6vw,88px);align-items:center}
+.hero h1{font-size:clamp(2.7rem,6vw,5.4rem);line-height:1;margin:18px 0 22px}
+.price-row{display:flex;flex-wrap:wrap;align-items:center;gap:14px 26px;margin:30px 0 14px}
+.price{font-family:var(--display);font-size:clamp(2.2rem,3.4vw,2.9rem);line-height:1;color:var(--on-ground)}
+.price small{display:block;font-family:var(--label);font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;color:var(--on-ground-dim);margin-top:8px}
+.ship-note{font-size:.92rem;color:var(--on-ground-dim)}
+.ship-note b{color:var(--metal-soft);font-weight:600}
+.placeholder-note{display:block;margin-top:10px;font-size:.78rem;color:var(--accent)}
+
+/* the box plate */
+.plate{position:relative;aspect-ratio:5/6;width:100%;max-width:470px;justify-self:center;border-radius:999px 999px 28px 28px;overflow:hidden;
+  background:radial-gradient(60% 45% at 50% 30%,rgba(255,244,214,.55),transparent 70%),linear-gradient(180deg,#7E2E5E 0%,#C66A5C 52%,#F2C979 100%);box-shadow:0 50px 90px -50px rgba(0,0,0,.7)}
+.plate::before{content:"";position:absolute;inset:12px;border-radius:999px 999px 20px 20px;border:1px solid rgba(255,244,214,.45);pointer-events:none}
+.plate svg{position:absolute;left:50%;bottom:9%;transform:translateX(-50%);width:84%;height:auto;color:var(--ink)}
+.plate .slot{position:absolute;left:50%;top:15%;transform:translateX(-50%);width:max-content;max-width:80%;text-align:center;font-family:var(--label);font-size:.56rem;letter-spacing:.18em;text-transform:uppercase;color:var(--ink);background:rgba(255,252,247,.7);border-radius:999px;padding:7px 14px}
+
+/* sheets */
+.sheet{position:relative;border-radius:var(--sheet) var(--sheet) 0 0;margin-top:calc(var(--sheet) * -1);padding-block:clamp(72px,10vw,140px);isolation:isolate}
+.paper{background:radial-gradient(60% 50% at 8% 0%,rgba(var(--rgb-velvet),.09),transparent 70%),radial-gradient(50% 45% at 100% 100%,rgba(var(--rgb-accent),.15),transparent 70%),linear-gradient(180deg,var(--paper-2),var(--paper));color:var(--ink)}
+.paper .eyebrow{color:var(--accent-ink)}
+.paper h2 em,.paper h3 em{color:var(--em-on-paper)}
+.paper .lede{color:var(--ink-dim)}
+.dark{background:radial-gradient(50% 40% at 85% 10%,rgba(var(--rgb-metal),.12),transparent 70%),linear-gradient(180deg,var(--ground-2),var(--ground))}
+.band{background:radial-gradient(70% 60% at 0% 0%,rgba(var(--rgb-velvet),.26),transparent 65%),linear-gradient(160deg,var(--accent-band),var(--accent-band-2));color:var(--ink)}
+.band .eyebrow{color:var(--ink)}
+.h2{font-size:clamp(2.2rem,4.4vw,3.8rem);line-height:1.04;margin:16px 0 18px}
+.head{max-width:760px;margin-bottom:clamp(36px,5vw,64px)}
+
+/* inside */
+.inside{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(20px,3vw,40px)}
+.group{background:rgba(255,252,247,.62);border-radius:24px;padding:clamp(24px,3vw,40px);box-shadow:0 30px 60px -48px rgba(var(--rgb-velvet),.55)}
+.group h3{font-size:clamp(1.6rem,2.4vw,2.1rem);margin:10px 0 6px}
+.group > p{color:var(--ink-dim);font-size:.98rem}
+.items{list-style:none;margin:20px 0 0;padding:0;display:flex;flex-direction:column;gap:16px}
+.items li{display:grid;grid-template-columns:44px 1fr;gap:14px;align-items:start}
+.items svg{width:44px;height:44px;color:var(--em-on-paper)}
+.items b{display:block;font-weight:700;font-size:1rem;color:var(--ink);line-height:1.35}
+.items span{display:block;font-size:.93rem;color:var(--ink-dim);line-height:1.55}
+.items .tag{display:inline-block;margin-top:5px;font-family:var(--label);font-size:.55rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--accent-ink);background:rgba(var(--rgb-accent),.28);border-radius:999px;padding:4px 10px}
+.sealed{margin-top:clamp(28px,4vw,48px);display:flex;gap:14px;align-items:flex-start;max-width:820px;font-size:.95rem;color:var(--ink-dim)}
+.sealed svg{flex:none;width:28px;height:28px;color:var(--em-on-paper);margin-top:2px}
+
+/* who */
+.who{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(18px,2.4vw,32px)}
+.who div{border:1px solid rgba(248,241,231,.18);border-radius:22px;padding:clamp(24px,2.6vw,36px);background:rgba(248,241,231,.03)}
+.who .mini{color:var(--accent)}
+.who h3{font-size:1.55rem;margin:10px 0 8px}
+.who p{color:var(--on-ground-dim);font-size:.97rem}
+
+/* ship steps */
+.steps{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:clamp(16px,2vw,28px);counter-reset:s}
+.steps li{counter-increment:s;border-top:1px solid rgba(42,18,38,.35);padding-top:16px;display:flex;flex-direction:column;gap:6px}
+.steps li::before{content:"0" counter(s);font-family:var(--label);font-size:.66rem;font-weight:600;letter-spacing:.24em}
+.steps b{font-family:var(--display);font-weight:400;font-size:1.45rem;line-height:1.15}
+.steps span{font-size:.95rem;line-height:1.55;color:rgba(42,18,38,.82)}
+.ship-facts{margin-top:clamp(28px,4vw,48px);display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.ship-facts div{background:rgba(255,252,247,.5);border-radius:18px;padding:18px 20px;font-size:.95rem}
+.ship-facts .mini{display:block;margin-bottom:4px}
+
+/* care + faq */
+.care{display:grid;grid-template-columns:1fr 1.1fr;gap:clamp(32px,6vw,88px);align-items:start}
+.notice{border-left:2px solid var(--em-on-paper);padding:6px 0 6px 20px;font-size:1.02rem;color:var(--ink);max-width:56ch}
+.notice p+p{margin-top:12px}
+.notice b{font-weight:700}
+details{border-top:1px solid var(--ink-faint);padding:16px 0}
+details:last-of-type{border-bottom:1px solid var(--ink-faint)}
+summary{cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:16px;font-family:var(--display);font-size:1.25rem;color:var(--ink)}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";font-family:var(--label);color:var(--em-on-paper)}
+details[open] summary::after{content:"\2212"}
+details p{margin-top:10px;color:var(--ink-dim);font-size:.97rem}
+
+/* final buy */
+.final{text-align:center;padding-block:clamp(80px,11vw,150px)}
+.final svg.sun{width:88px;height:40px;color:var(--metal);margin:0 auto 18px}
+.final .h2{margin-inline:auto;max-width:18ch}
+.final .lede{margin:0 auto 30px}
+.final .price{margin-bottom:22px}
+
+footer{border-top:1px solid var(--on-ground-faint);padding:34px 0 calc(34px + env(safe-area-inset-bottom,0px));color:var(--on-ground-dim);font-size:.85rem}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px 28px}
+footer .mini{color:var(--metal)}
+
+@media (max-width:900px){
+  .hero-grid,.care{grid-template-columns:1fr}
+  .plate{max-width:360px;order:-1}
+  .inside{grid-template-columns:1fr}
+  .who{grid-template-columns:1fr}
+  .steps{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .ship-facts{grid-template-columns:1fr}
+}
+@media (max-width:560px){
+  header nav a:not(.buy){display:none}
+  .mark small{display:none}
+  .steps{grid-template-columns:1fr}
+  .btn{width:100%}
+  .price-row{flex-direction:column;align-items:stretch}
+}
+@media (prefers-reduced-motion:no-preference){
+  .plate{transition:transform 1.2s var(--ease)}
+  .plate:hover{transform:translateY(-6px)}
+}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="sun" viewBox="0 0 88 40"><g fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M26 38a18 18 0 0 1 36 0"/><path d="M44 3v10M30 7l4 9M58 7l-4 9M18 15l7 6M70 15l-7 6M10 26l9 3M78 26l-9 3M4 37h12M72 37h12"/></g></symbol>
+  <symbol id="i-bowl" viewBox="0 0 48 48"><g fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M7 22h34a17 13 0 0 1-34 0z"/><path d="M18 16c0-3 2-3 2-6M24 16c0-3 2-3 2-6M30 16c0-3 2-3 2-6"/></g></symbol>
+  <symbol id="i-basin" viewBox="0 0 48 48"><g fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M6 18h36l-4 20H10z"/><path d="M9 24h30M8 30h32"/><path d="M14 18c2-4 6-6 10-6s8 2 10 6"/></g></symbol>
+  <symbol id="i-card" viewBox="0 0 48 48"><g fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="7" width="30" height="34" rx="3"/><path d="M15 16h18M15 22h18M15 28h12"/><path d="M19 36a5 5 0 0 1 10 0"/></g></symbol>
+  <symbol id="i-seed" viewBox="0 0 48 48"><g fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="17" cy="28" rx="6" ry="7.5"/><ellipse cx="31" cy="30" rx="6" ry="7.5"/><ellipse cx="24" cy="17" rx="6" ry="7.5"/><path d="M24 9v-4M20 6l4 3 4-3"/></g></symbol>
+  <symbol id="i-tab" viewBox="0 0 48 48"><g fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="26" r="9"/><circle cx="31" cy="20" r="7"/><path d="M12 26h12M27 20h8"/></g></symbol>
+  <symbol id="i-bottle" viewBox="0 0 48 48"><g fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 5h8v6l3 4v26a2 2 0 0 1-2 2H19a2 2 0 0 1-2-2V15l3-4z"/><path d="M17 22h14v12H17z"/></g></symbol>
+  <symbol id="i-drop" viewBox="0 0 48 48"><g fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M21 4h6v6h-6z"/><path d="M19 12h10v4l2 3v20a2 2 0 0 1-2 2H19a2 2 0 0 1-2-2V19l2-3z"/><path d="M36 22c0 0-4 5-4 7.5a4 4 0 0 0 8 0C40 27 36 22 36 22z"/></g></symbol>
+  <symbol id="i-lemon" viewBox="0 0 48 48"><g fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M9 26c0-9 7-15 15-15s15 6 15 15-7 13-15 13S9 35 9 26z"/><path d="M6 26h3M39 26h3"/><path d="M24 11c1-3 4-5 7-5"/></g></symbol>
+  <symbol id="i-week" viewBox="0 0 48 48"><g fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="16" width="40" height="16" rx="3"/><path d="M10 16v16M16 16v16M22 16v16M28 16v16M34 16v16M40 16v16"/></g></symbol>
+  <symbol id="i-seal" viewBox="0 0 48 48"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="24" cy="24" r="17"/><path d="M16 24l6 6 11-12"/></g></symbol>
+</svg>
+
+
+<header>
+  <div class="wrap bar">
+    <a class="mark" href="#top" aria-label="ponya home"><svg><use href="#sun"/></svg><b>ponya</b><small>HEALTH IS WEALTH.</small></a>
+    <nav aria-label="Kit sections"><a href="#inside">Inside</a><a href="#ships">Shipping</a><a href="#care">Good to know</a><a class="buy" href="#buy">Reserve the Kit</a></nav>
+  </div>
+</header>
+
+<main>
+  <section id="top" class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <p class="eyebrow">The PONYA Kit</p>
+        <h1>The ritual, boxed and <em>sent home.</em></h1>
+        <p class="lede">A warm foot soak, a few shelf favorites our members reach for, moringa seeds and a simple way to keep your routine. Everything for an hour that is only yours, packed by hand in Los Angeles.</p>
+        <div class="price-row">
+          <p class="price">$225<small>One kit · shipping included · US only</small></p>
+          <a class="btn btn-solid" id="buy-top" href="https://form.jotform.com/263206347822153">Reserve your PONYA Kit</a>
+        </div>
+        <p class="ship-note"><b>Pre-sale:</b> reserve now and we email you to confirm your ship date and payment. Once your kit ships, tracking comes by email and it arrives in about 7 to 10 business days. Every item arrives sealed, just as its maker packed it.</p>
+      </div>
+      <div class="plate" role="img" aria-label="Illustration of the PONYA Kit box with a soak basin, bottles and seeds">
+        <svg viewBox="0 0 360 220" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M20 120h320v86a6 6 0 0 1-6 6H26a6 6 0 0 1-6-6z" fill="rgba(255,252,247,.55)"/>
+          <path d="M20 120l26-26h268l26 26"/>
+          <path d="M150 166h60" /><use href="#sun" x="150" y="140" width="60" height="27"/>
+          <path d="M58 94V58a4 4 0 0 1 4-4h22a4 4 0 0 1 4 4v36" fill="rgba(255,244,214,.65)"/><path d="M66 54V40h10v14"/>
+          <path d="M104 94V70a4 4 0 0 1 4-4h14a4 4 0 0 1 4 4v24" fill="rgba(206,200,75,.55)"/><path d="M110 66V56h6v10"/>
+          <path d="M226 94c0-18 16-30 34-30s34 12 34 30" fill="rgba(255,252,247,.6)"/><path d="M240 66c1-6 3-10 3-16M260 62c1-6 3-10 3-16M280 66c1-6 3-10 3-16"/>
+          <ellipse cx="160" cy="88" rx="7" ry="9" fill="rgba(255,244,214,.8)"/><ellipse cx="178" cy="90" rx="7" ry="9" fill="rgba(255,244,214,.8)"/><ellipse cx="196" cy="88" rx="7" ry="9" fill="rgba(255,244,214,.8)"/>
+        </g></svg>
+      </div>
+    </div>
+  </section>
+
+  <section id="inside" class="sheet paper">
+    <div class="wrap">
+      <div class="head">
+        <p class="eyebrow">What's inside</p>
+        <h2 class="h2">Two parts. <em>One calm hour.</em></h2>
+        <p class="lede">The soak sets the scene. The shelf gives you a few simple things to sip and keep close, the way our members do.</p>
+      </div>
+      <div class="inside">
+        <div class="group">
+          <p class="mini" style="color:var(--accent-ink)">Part one</p>
+          <h3>The <em>soak</em></h3>
+          <p>A warm foot soak at home, the heart of every PONYA Pod. Warm water, your favorite tea and thirty quiet minutes.</p>
+          <ul class="items">
+            <li><svg><use href="#i-basin"/></svg><div><b>Collapsible soak basin</b><span>Folds flat to store, opens wide for both feet. Add warm water and sit back.</span></div></li>
+            <li><svg><use href="#i-card"/></svg><div><b>The PONYA soak guide</b><span>A one-page card: set the room, pour the tea, breathe, soak.</span></div></li>
+            <li><svg><use href="#i-seed"/></svg><div><b>Moringa seeds + our moringa card</b><span>A small sealed pack of moringa seeds and the PONYA card on this tree we love.</span><span class="tag">Free for PONYA members</span></div></li>
+          </ul>
+        </div>
+        <div class="group">
+          <p class="mini" style="color:var(--accent-ink)">Part two</p>
+          <h3>The <em>shelf</em></h3>
+          <p>Options our members like, chosen for flavor, ritual and ease.</p>
+          <ul class="items">
+            <li><svg><use href="#i-bottle"/></svg><div><b>Jamaican turmeric ginger extract</b><span>A golden extract people add to tea or warm water. Home Choice, 16 oz.</span></div></li>
+            <li><svg><use href="#i-drop"/></svg><div><b>Liquid chlorophyll drops</b><span>Peppermint drops people stir into a glass of water.</span></div></li>
+            <li><svg><use href="#i-tab"/></svg><div><b>Chewable papaya enzyme</b><span>The after-meal chewable many of our members keep by the table.</span></div></li>
+            <li><svg><use href="#i-lemon"/></svg><div><b>Lemon for your water</b><span>Shelf-stable lemon packets, easy to carry and travel with.</span></div></li>
+            <li><svg><use href="#i-week"/></svg><div><b>Weekly organizer</b><span>Seven days at a glance, so the routine keeps itself.</span></div></li>
+          </ul>
+        </div>
+      </div>
+      <p class="sealed"><svg><use href="#i-seal"/></svg><span>Every shelf item ships sealed and unopened, with its maker's own label, ingredients and directions. PONYA does not make, open or repackage them. Items may be swapped for a close match if one is out of stock, and we will tell you before we ship.</span></p>
+    </div>
+  </section>
+
+  <section class="sheet dark">
+    <div class="wrap">
+      <div class="head">
+        <p class="eyebrow">Who it's for</p>
+        <h2 class="h2">For the one who <em>carries everyone.</em></h2>
+      </div>
+      <div class="who">
+        <div><p class="mini">For you</p><h3>Your hour, at home</h3><p>You loved the idea of a PONYA Pod and want the ritual in your own space, on your own time.</p></div>
+        <div><p class="mini">For a fresh start</p><h3>A simple routine</h3><p>You want a few easy habits in one place: something warm, something to sip, a week laid out.</p></div>
+        <div><p class="mini">For someone you love</p><h3>A gift that says <em>rest</em></h3><p>For the friend, mother or coworker who takes care of everyone else. Add a note at checkout.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="ships" class="sheet band">
+    <div class="wrap">
+      <div class="head">
+        <p class="eyebrow">How it ships</p>
+        <h2 class="h2">Gathered fresh, <em style="color:var(--ink)">packed by hand.</em></h2>
+      </div>
+      <ol class="steps">
+        <li><b>You order</b><span>Reserving takes a minute. We email you to confirm your ship date and payment, and nothing is charged until then.</span></li>
+        <li><b>We gather</b><span>We bring in each item new, and check every seal and date.</span></li>
+        <li><b>We pack</b><span>Your kit is boxed by hand in Los Angeles with a handwritten card.</span></li>
+        <li><b>It arrives</b><span>Tracking comes by email once your kit ships, then about 7 to 10 business days.</span></li>
+      </ol>
+      <div class="ship-facts">
+        <div><span class="mini">Where</span>United States, lower 48 states, for now.</div>
+        <div><span class="mini">Cost</span>Shipping is included in the $225.</div>
+        <div><span class="mini">Questions</span>Write to us at <b>swazisocials@gmail.com</b>.</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="care" class="sheet paper">
+    <div class="wrap care">
+      <div>
+        <p class="eyebrow">Good to know</p>
+        <h2 class="h2">Options, <em>not medical advice.</em></h2>
+        <div class="notice">
+          <p>These are options our members like. They are <b>not medical advice</b>, and the PONYA Kit is not meant to diagnose, treat or prevent anything.</p>
+          <p><b>Check with your doctor</b> before starting any supplement or a new routine, especially if you are pregnant or nursing, take medication or have a health condition. If you have a condition that affects feeling in your feet, check the water temperature with your hand first.</p>
+          <p>Read each maker's label and follow its directions. For adults 18 and over.</p>
+        </div>
+      </div>
+      <div>
+        <details open><summary>Can I swap an item?</summary><p>Not at checkout yet. If you cannot use something, write to us before your kit ships and we will see what we can do.</p></details>
+        <details><summary>What do PONYA members get?</summary><p>Members get the moringa seeds and our moringa card free, and hear first when new seasonal kits open.</p></details>
+        <details><summary>Is anything opened or repacked?</summary><p>No. Every item on the shelf ships sealed, exactly as its maker packed it, with the maker's own label.</p></details>
+        <details><summary>Ordering for a team or event?</summary><p>For 10 or more kits, write to us and we will put together a quote.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <section id="buy" class="dark final">
+    <div class="wrap">
+      <svg class="sun" aria-hidden="true"><use href="#sun"/></svg>
+      <p class="eyebrow" style="justify-content:center">The PONYA Kit</p>
+      <h2 class="h2">Bring the hour <em>home.</em></h2>
+      <p class="lede">The soak, the shelf, the seeds and the guide. Shipping included.</p>
+      <p class="price">$225</p>
+      <a class="btn btn-solid" id="buy-bottom" href="https://form.jotform.com/263206347822153">Reserve your PONYA Kit</a>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span class="mini">ponya · Wellness. Power. Freedom.</span>
+    <span>Wellness experiences and options only. Not medical advice.</span>
+    <span>Los Angeles, California · ponya.me</span>
+  </div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,65 @@
+/* PONYA SEASON PALETTE
+   Current: FALL 2026 (Sep 23 to Dec 21 2026). Deep Plum + Chartreuse, with gold and cream/white as support.
+   Three accents only: plum (ground), chartreuse (accent), gold (metal). Cream and white are neutrals.
+
+   To change season, swap ONLY this file. Every color on the site, the session app and the art plates
+   reads from these variables. Logo, layout, type and navigation stay the same all year.
+   Winter (next, Navy + Butter Yellow) starter values are at the bottom, commented out. */
+
+:root{
+  --season-label:"Fall 2026";
+
+  /* ground: the dark bands */
+  --ground:#230F1E;          /* deepest plum, page ground */
+  --ground-2:#2E1428;        /* raised plum band */
+  --velvet:#4A1C3F;          /* plum velvet */
+  --velvet-2:#6E2B5C;        /* raspberry light catching the velvet */
+  --on-ground:#F8F1E7;       /* type on dark */
+  --on-ground-dim:rgba(248,241,231,.74);
+  --on-ground-faint:rgba(248,241,231,.15);
+
+  /* accent: chartreuse */
+  --accent:#CEC84B;          /* on dark: eyebrows, small marks */
+  --accent-band:#BFB83A;     /* the chartreuse velvet band */
+  --accent-band-2:#A29B22;
+  --accent-ink:#5C5810;      /* chartreuse, deepened for text on paper */
+
+  /* metal: gold and champagne */
+  --metal:#D5B06B;
+  --metal-soft:#ECD8A8;
+
+  /* paper: the light bands */
+  --paper:#F6EFE5;           /* cream */
+  --paper-2:#FFFCF7;         /* white */
+  --paper-3:#EEE3D2;         /* deeper cream, cards */
+  --ink:#2A1226;             /* plum ink */
+  --ink-dim:#69505F;
+  --ink-faint:rgba(42,18,38,.14);
+  --em-on-paper:#7A2D64;     /* italic accent on paper */
+
+  /* rgb triplets for glows and veils */
+  --rgb-ground:35,15,30;
+  --rgb-velvet:110,43,92;
+  --rgb-metal:213,176,107;
+  --rgb-accent:206,200,75;
+  /* Tag your sunset: sample skies */
+  --sky1:linear-gradient(180deg,#3A1433 0%,#7E2E5E 45%,#E2A15E 68%,#F6D489 100%);
+  --sky2:linear-gradient(180deg,#5B2350 0%,#C66A5C 50%,#F2C979 72%);
+  --sky3:linear-gradient(180deg,#2A1226 0%,#6E2B5C 40%,#C9A44F 70%,#D9D36A 100%);
+  --sky4:linear-gradient(180deg,#7A3A64 0%,#E39A72 52%,#F7DFA4 76%);
+  --sky5:linear-gradient(180deg,#24101F 0%,#4A1C3F 38%,#B36A55 62%,#EBC27A 82%);
+  --sky6:linear-gradient(180deg,#46183C 0%,#9C4A6A 44%,#D9B45E 66%,#CEC84B 90%);
+  --sun-core:#FFF4D6; --sun-glow:#F2C979; --sun-alt:#E8DE7A; --sun-alt2:#F3E79A;
+}
+
+/* WINTER starter (not active, not reviewed):
+:root{
+  --season-label:"Winter 2026";
+  --ground:#0E1830; --ground-2:#14213F; --velvet:#1D2F5A; --velvet-2:#2C4479;
+  --accent:#F3DE8C; --accent-band:#F1DC88; --accent-band-2:#E2C866; --accent-ink:#6B5A12;
+  --metal:#D9C08A; --metal-soft:#F5E9C4;
+  --paper:#FBF6E6; --paper-2:#FFFDF6; --paper-3:#F3EBD2;
+  --ink:#101B35; --ink-dim:#4D5670; --ink-faint:rgba(16,27,53,.14); --em-on-paper:#2C4479;
+  --rgb-ground:14,24,48; --rgb-velvet:44,68,121; --rgb-metal:217,192,138; --rgb-accent:243,222,140;
+}
+*/
